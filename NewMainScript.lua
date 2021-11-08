@@ -72,7 +72,7 @@ local checkpublicreponum = 0
 local checkpublicrepo
 checkpublicrepo = function(id)
 	local suc, req = pcall(function() return requestfunc({
-		Url = "https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/CustomModules/"..id..".vape",
+		Url = "https://raw.githubusercontent.com/3ject/VapeV4ForRoblox/main/CustomModules/"..id..".vape",
 		Method = "GET"
 	}) end)
 	if not suc then
@@ -117,7 +117,7 @@ local function getcustomassetfunc(path)
 			textlabel:Remove()
 		end)
 		local req = requestfunc({
-			Url = "https://raw.githubusercontent.com/3ject/VapeV4ForRoblox/main/"..path:gsub("vape/assets", "assets"),
+			Url = "https://raw.githubusercontent.com/3ject/VapeV4ForRoblox/main/"..path:gsub("vape/assetsboop", "assets"),
 			Method = "GET"
 		})
 		writefile(path, req.Body)
